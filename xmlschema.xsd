@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.baeldung.com/springsoap/gen"
+           targetNamespace="http://www.baeldung.com/springsoap/gen" elementFormDefault="qualified">
+
+    <xs:element name="string">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="country" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getCovid">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="country" type="tns:covid"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="covid">
+        <xs:sequence>
+            <xs:element name="country" type="xs:string"/>
+            <xs:element name="confirmed" type="xs:int"/>
+            <xs:element name="recovered" type="xs:string"/>
+            <xs:element name="deaths" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
